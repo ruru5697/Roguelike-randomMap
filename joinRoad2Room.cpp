@@ -31,9 +31,7 @@ void joinRoad2Room(Map& m,vector<Room> rooms){
 			if(nextPos.x>=m.size.x||nextPos.x<0||nextPos.y>=m.size.y||nextPos.y<0)
 				continue;
 			if(m.table[nextPos.x][nextPos.y]){
-				m.table[wallPos.x][wallPos.y]=
-					m.table[nextPos.x][nextPos.y]=
-					m.table[(wallPos.x+nextPos.x)/2][(wallPos.y+nextPos.y)/2]=1;
+				m.table[(wallPos.x+nextPos.x)/2][(wallPos.y+nextPos.y)/2]=1;
 				char t=direction[index];
 				direction[index]=direction[len];
 				direction[len--]=t;
